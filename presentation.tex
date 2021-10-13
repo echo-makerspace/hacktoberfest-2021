@@ -82,12 +82,18 @@
     \end{itemize}
   \end{frame}
 
+  \begin{frame}[standout]
+    \frametitle{Choose a license}
+    https://choosealicense.com/
+  \end{frame}
+
   \section{Hacktoberfest}
-  % TODO: Add URL
   \begin{frame}[standout]
     \frametitle{Hacktoberfest}
   
-    A way to pay back to the community
+    A way to pay back to the community \\
+
+    https://hacktoberfest.com
   \end{frame}
   \begin{frame}
     \frametitle{Hacktoberfest}
@@ -96,7 +102,7 @@
       \item 4 PRs = swag/tree
       \item Must be contributing PRs, not wasteful
       \item Must be accepted
-      \item Look for issues with \textbf{hacktoberfest} label
+      \item Look for issues/repositories with \textbf{hacktoberfest} label
       \item Good way for budding developers to start contributing
     \end{itemize}
   \end{frame}
@@ -115,29 +121,109 @@
   \end{frame}
 
   \subsection{Using \texttt{git}}
-  \begin{frame}[fragile]
-    \frametitle{\texttt{git status}}
- 
-    \begin{lstlisting}
-$ git status
-On branch refactor
-Your branch is up to date with 'origin/refactor'.
-
-nothing to commit, working tree clean
-    \end{lstlisting}
+  \begin{frame}
+    \frametitle{Workflow}
+    
+    \begin{enumerate}
+      \item Project needs bug fixes, new features etc
+      \item Checkout repository
+      \item Create new branch
+      \item Commit your changes as you work
+      \item Push to remote repository
+      \item Create pull request
+      \item ??
+      \item Profit
+    \end{enumerate}
   \end{frame}
   \begin{frame}
     \frametitle{\texttt{git} commands}
 
     \begin{description}
-      \item \texttt{git add ...}    
+      \item \texttt{git status}
+      \item \texttt{git add ...}
       \item \texttt{git commit}
       \item \texttt{git commit -m "Message"}    
       \item \texttt{git push}
       \item \texttt{git pull}
       \item \texttt{git fetch}
+      \item \texttt{git branch}
+      \item \texttt{git switch}
+      \item \texttt{git merge}
     \end{description}
   \end{frame}
+
+  \begin{frame}[standout]
+    \frametitle{git commands}
+    https://git-man-page-generator.lokaltog.net/   
+  \end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{\texttt{git status}}
+ 
+    \begin{lstlisting}
+$ git status
+On branch main
+Your branch is up to date with 'main'.
+
+nothing to commit, working tree clean
+    \end{lstlisting}
+  \end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{\texttt{git branching}}
+ 
+    \begin{lstlisting}
+$ git branch
+* main
+
+$ git switch -c new-feature
+Switched to a new branch 'new-feature'
+
+$ git branch
+  main
+* new-feature
+    \end{lstlisting}
+  \end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{\texttt{git workflow}}
+ 
+    \begin{lstlisting}
+$ git status -s
+ M presentation.tex
+
+$ git add presentation.tex 
+
+$ git status -s
+M  presentation.tex
+
+$ git commit -m "Add more frames about git workflow"
+[new-feature c8b88d3] Add more frames about git workflow
+ 1 file changed, 76 insertions(+), 14 deletions(-)
+    \end{lstlisting}
+  \end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{\texttt{git pushing}}
+ 
+    \begin{lstlisting}
+$ git push -u origin new-feature
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 796 bytes | 796.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+To github.com:echo-makerspace/hacktoberfest-2021.git
+ * [new branch]      new-feature -> new-feature
+Branch 'new-feature' set up to track remote branch 'new-feature' from 'origin'.
+
+$ git status
+On branch new-feature
+Your branch is up to date with 'origin/new-feature'.
+    \end{lstlisting}
+  \end{frame}
+
 
   \subsection{Branching}
   \begin{frame}
@@ -209,5 +295,5 @@ nothing to commit, working tree clean
   \end{frame}
 
   \section{DEMO}
-  \section*{Pizza}
+  \section*{Pizza og jobbing}
 \end{document}
